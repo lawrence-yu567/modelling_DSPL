@@ -102,19 +102,7 @@ def joint_model(z_l, z_s1, z_s2):
     
     npr.sample('likelihood',dist.Normal(model_beta, measured_error_beta),obs=measured_beta)
 
-        
 
-# sanity check from claude
-"""
-w_0_lcdm = jnp.float32(-1.0)
-w_a_lcdm = jnp.float32(0.0)
-
-b_lcdm = b(z_l, z_s1, z_s2, w_0_lcdm, w_a_lcdm)
-print(f"beta at ΛCDM:    {b_lcdm.item():.4f}")
-print(f"measured beta:   {beta:.4f}")
-print(f"difference:      {abs(b_lcdm - beta).item():.4f}")
-print(f"in sigma:        {(abs(b_lcdm - beta) / 0.02).item():.1f}σ")
-"""
 #single_variable(3, 4, 0.1)
 
 #this gives some interesting plots
